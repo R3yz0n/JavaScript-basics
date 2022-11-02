@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- nodetypes
+    1 element
+    2 attribute
+    3 textnode -->
+
+    <section>
+        <div class="child">this is dummy 1
+            <b>bold
+                <span>
+                    span
+                </span>
+            </b>
+        </div>
+        <div class="child">this is dummy 2</div>
+        <div class="child">this is dummy 3</div>
+    </section>
+
+    <script>
+        let child = document.querySelector("section")
+        console.dir(child);
+        // console.log(child.children[0]);
+        // console.log(child.children[0]);
+        child = child.firstElementChild.nextElementSibling.nextElementSibling
+        // child = child.children[2]
+        console.log(child);
+
+    </script>
+
+
+</body>
+
+</html>

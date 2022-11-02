@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="analog.css">
+</head>
+
+<body>
+
+    <main>
+        <div class="clock">
+            <span class="hr">01</span>:
+            <span class="min">10 </span>:
+            <span class="sec">55</span>|
+            <span class="am">AM</span>
+
+        </div>
+
+    </main>
+
+
+    <script>
+        let hr = document.querySelector('.hr')
+        let min = document.querySelector('.min')
+        let sec = document.querySelector('.sec')
+        let am = document.querySelector('.am')
+
+
+
+        start = setInterval(() => {
+            let x = new Date();
+            let gethr = x.getHours();
+            let getmin = x.getMinutes();
+            let getsec = x.getSeconds();
+            if (gethr >= 12) {
+                am.innerHTML = "PM"
+            }
+            else {
+                am.innerHTML = "AM"
+            }
+            if (gethr > 12) {
+                gethr -= 12;
+            }
+
+            hr.innerHTML = gethr;
+            min.innerHTML = getmin;
+            sec.innerHTML = getsec;
+
+        }, 500);
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

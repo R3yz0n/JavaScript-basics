@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        const datas = [
+            { name: 'Sagar' },
+            { name: 'Aasis' }
+        ]
+
+
+        function getDatas() {
+
+            setTimeout(() => {
+
+                let output = "";
+
+                datas.forEach(
+                    (data, index) => {
+                        output += `<li>${data.name}</li>`
+
+                    }
+                )
+                document.body.innerHTML = output;
+                // console.log(document.body.innerHTML);
+
+
+            }, 5000)
+        }
+
+        function createData(newData, callback) {
+
+            setTimeout(() => {
+
+                datas.push(newData);
+                callback();
+
+
+
+            }, 5000);
+
+        }
+
+
+        createData({ name: 'NEW' }, getDatas)
+        // getDatas();
+
+    </script>
+
+</body>
+
+</html>

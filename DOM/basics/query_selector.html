@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section id="ss" class="sss">
+
+        <div class="first">first div
+
+            <h1>h1</h1>
+
+        </div>
+        <div class="first second">second div</div>
+        <div>third div</div>
+
+    </section>
+
+    <script>
+        // class doesnt change the value of inner text and html
+        let el = document.getElementsByClassName('first')
+        // console.log(el);
+        // el.innerHTML = "<i>italic</i>"
+        // el.innerText = "new text"
+
+
+
+
+
+        let sel = document.querySelector('div')
+        console.log(sel);
+        sel.style.height = "100px"
+        sel.style.border = "1px solid red"
+        sel.style.color = "blue"
+
+
+        let sel2 = document.getElementById("ss")
+        console.log(sel2);
+        sel2 = document.getElementsByClassName("first")
+        console.log(sel2);
+        let i = 0
+
+        Array.from(sel2).forEach(
+            (e, i) => {
+                i++
+                if (i % 2 == 0)
+                    e.style.backgroundColor = "red"
+
+                else
+                    e.style.backgroundColor = "blue"
+
+            }
+        )
+
+
+
+    </script>
+
+</body>
+
+</html>

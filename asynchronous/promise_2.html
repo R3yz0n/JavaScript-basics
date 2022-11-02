@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const students =
+            [
+                { name: 'harry', subject: 'JS' },
+                { name: 'sagar', subject: 'fullstack' }
+            ]
+
+        const enrollStudents = (newStudent) => {
+
+
+            return new Promise((getStudents, reject) => {
+
+                const error = false;
+
+                setTimeout(() => {
+                    console.log('Students enrolled and pushed');
+                    students.push(newStudent);
+                    getStudents(students);
+
+                }, 3000);
+
+
+            })
+
+
+        }
+
+        enrollStudents({ name: 'Vinod', subject: 'MERN' }).then((array) => {
+
+            setTimeout(() => {
+                console.log('getting student');
+                let append = ""
+                array.forEach((a) => {
+
+                    append += `<li>${a.name}</li>`
+
+                })
+
+                document.body.innerHTML = append
+
+            }, 2000);
+
+
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

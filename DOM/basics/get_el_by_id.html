@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        border: 1px solid red;
+        width: 100vw;
+        height: 40vh;
+        display: flex;
+        margin: auto;
+    }
+</style>
+
+<body>
+
+    <div id="first">
+
+        <span>
+            <h1>it doesnt show</h1>
+        </span>
+        <p>
+
+        </p>
+        <script>
+
+            let div = document.getElementById("first")
+            console.log(div);
+
+            div.innerText = "i am a good boy"
+            console.log(div.innerText);
+            div.innerHTML = '<b>added new<b>'
+            console.log(div.innerText);
+        </script>
+
+</body>
+
+</html>

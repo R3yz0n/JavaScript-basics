@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <main class="xd" id="idd">
+        <div class="no" id='no'>this is div 1 <b>hello</b></div>
+        <div class="no" id="no">this is div 2</div>
+        <div class="no">this is div 3</div>
+    </main>
+
+    <script>
+
+        let sel = document.querySelectorAll('.no')
+        console.log(sel);
+        // sel = sel[0]
+        console.log(sel[0].innerHTML);
+        console.log(sel);
+        sel[0].innerText = "new added text"
+
+
+        // let sel = document.getElementById("idd")
+        // console.log(sel);
+        // sel.innerText = "sagr"
+
+    </script>
+
+</body>
+
+</html>

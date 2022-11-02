@@ -1,0 +1,42 @@
+https://www.w3schools.com/js/js_object_definition.asp
+
+Both approaches are the same
+-----------------------------------------
+
+console.log(Object.keys(o)[1]);
+
+ or
+ 
+for(key in o)
+clog(key)
+
+
+-------------------------------------------------------------------------------------
+  // this causes undefied as key acts as string, and key is variable to iterate
+    console.log(o.key);
+
+-----------------------------------------------------------------------------------------
+o['ki a'] = true;
+
+o.ki a=true; (. for string purpose, [] for variable purpose)
+
+Demo imp program
+
+
+o = {
+    123: "shubam",
+    name: "sagar",
+    roll: 19,
+    age: 21
+}
+const x = "it is X"
+console.log(typeof Object.keys(o)[0]);
+o['ki a'] = true;
+// treated as string
+// o.x = 981921221;
+o[x] = 12345;
+console.log(typeof Object.keys(o)[0]);
+console.log(Object.keys(o));
+console.log(o);
+
+

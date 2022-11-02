@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="myfirst" class="child red good">
+        <ul class="this">
+            <li class="first">first</li>
+            <li class="second" id="sec">second</li>
+            <li class="third" type="12">third</li>
+
+
+
+        </ul>
+    </div>
+
+
+    </div>
+    <script>
+
+        // replacechild it removes the replaced childelement
+        let a = document.querySelector('.this')
+        // let x = document.querySelector('.first')
+
+        // let y = document.querySelector('.second')
+        // a.replaceChild(x, y)
+
+        a.removeChild(document.getElementById('sec'))
+        let sel = document.querySelector('.third')
+        sel = sel.hasAttribute('type')
+        console.log(sel);
+        sel = document.querySelector('.third')
+        sel.removeAttribute('type')
+
+
+
+
+    </script>
+
+</body>
+
+</html>
